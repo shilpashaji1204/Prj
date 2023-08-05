@@ -8,7 +8,10 @@ exports.homepage = async (req, res) => {
 
     }
 
-    res.render('index', locals);
+    res.render('index', {
+        locals,
+        layout: '../views/layouts/front-page'
+      });
 }
 
 // About 
@@ -21,9 +24,5 @@ exports.about = async (req, res) => {
 
     }
 
-    res.render('about', {
-        locals,
-        layout: '../views/layouts/front-page'
-    
-    });
+    res.render('about', locals);
 }
